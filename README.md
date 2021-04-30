@@ -9,7 +9,7 @@ Embora esta séria de Workshops não se proponha a ensinar IoT desde o nivel zer
 
 ## Pre-requisitos
 
-Para voce ser bem sucedido em acompanhar estes workshops E aprender IoT, existem algunspre-requisitos:
+Para voce ser bem sucedido em acompanhar estes workshops E aprender IoT, existem alguns pre-requisitos:
 
 - Espera-se que voce tenha conhecimentos / graduação em uma das matérias relacionadas a TI. 
 - Voce - mesmo recém formado - tem conhecimento de alguma linguagem de programação, 
@@ -23,7 +23,7 @@ Para voce ser bem sucedido em acompanhar estes workshops E aprender IoT, existem
 
 Nos workshops que fazem parte desse repositório, nos vamos cobrir os seguintes aspectos de IoT:
 
-- Setup da maquina de desenvolvimento
+- [Setup da maquina de desenvolvimento](setup.md)
 - MQTT - Protocolo da IoT
 - Hardware para IoT
     - ESP8266
