@@ -1,4 +1,4 @@
-![curso](imagens/banner.png)
+![curso](Imagens/banner.png)
 
 ## Introdução 
 IoT (do inglês Internet of Things) ou Internet das Coisas, como várias outras áreas do conhecimento humano é vasta, cobrindo dezenas de conceitos e tecnologias que se combinam para criar a IoT.
