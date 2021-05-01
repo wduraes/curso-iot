@@ -4,7 +4,7 @@ O primeiro passo no curso é fazer o setup da máquina que será utilizada para 
 
 Esta máquina precisa ter ao menos uma porta USB disponível e voce precisa ter um usuário com permissão de instalar e executar softwares como administrador.
 
-Embora a maioria dos aplicativos mencionados aqui estejam disponíveis para Linux e Mac, 100% dos meu exemplos utlizam um PC rodando Windows 10 e, quando necessário o uso de Linux, o WSL (Windows Subsystem for Linux) será a opção.
+Embora a maioria dos aplicativos mencionados aqui estejam disponíveis para Linux e Mac, 100% dos meus exemplos utilizam um PC rodando Windows 10 e, quando necessário o uso de Linux, o WSL (Windows Subsystem for Linux) será a opção.
 
 Todos eles são gratuitos.
 

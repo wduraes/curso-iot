@@ -54,10 +54,10 @@ Tão importante quanto definir o que será abordado é deixar claro o que não s
 - Não teremos exemplos de devices baseados em Windows ou Linux - nós vamos focar apenas em devices restritos, aqueles que tem pouca memória e que não sao capazes de rodar um SO (sistema operacional) completo.
 - Consultoria / garantia: fique a vontade para consumir tudo o que estiver neste repositório para seu uso pessoal e profissional, mas nada nele vem com garantia de funcionamento, ausencia de bugs, garantia de atualizacao no futuro, etc. Se voce encontrar um erro (desde gramática até bugs no código, por favor crie um Issue ou - melhor ainda - abra uma PR que eu verificarei cada uma delas)
 - Exemplos em qualquer linguagem de programação que nao seja C (padrão ANSI C - C99). Também está fora do escopo ensinar programacao em C. 
-- Exemplos em outras plataforma de Nuvem: todos os exemplos serão baseados no Azure da Microsoft. Nós tentaremos ao máximo manter os exemplso com recursos gratuitos ou trial, mas nao podemos garantir que estes recursos serão sempre gratuitos. 
+- Exemplos em outras plataformas de Nuvem: todos os exemplos serão baseados no Azure da Microsoft. Nós tentaremos ao máximo manter os exemplso com recursos gratuitos ou trial, mas nao podemos garantir que estes recursos serão sempre gratuitos. 
 
 ## Contribuindo
 
-Este projeto aceita contribuições e sugestões. Se voce tem algo a acrescentar, por favor crie uma PR com sua sugestão que eu terei o maior prezer em rever. Se voce encontrou um erro, me deixe saber via GitHub issue. 
+Este projeto aceita contribuições e sugestões. Se voce tem algo a acrescentar, por favor crie uma PR com sua sugestão que eu terei o maior prazer em rever. Se voce encontrou um erro, me deixe saber via GitHub issue. 
 
 Nao aceitamos pedidos de desenvolvimento de projetos, nem criaremos solucoes específicas para nenhuma empresa ou pessoa física. O conteúdo deste repositório é disponível como está sem nenhuma garantia. 
