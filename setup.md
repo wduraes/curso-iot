@@ -1,4 +1,4 @@
-## #1 - Setup da máquina de desenvolvimento
+## Setup da máquina de desenvolvimento
 
 O primeiro passo no curso é fazer o setup da máquina que será utilizada para o desenvolvimento necessário do curso. Ela pode ser um desktop ou laptop, nao faz diferença e se é capaz de rodar o Windows 10, provavelmente será o suficiente.
 

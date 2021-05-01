@@ -26,6 +26,7 @@ Nos workshops que fazem parte desse repositório, nos vamos cobrir os seguintes 
 
 - [Setup da maquina de desenvolvimento](setup.md)
 - [MQTT - Protocolo da IoT](mqtt.md)
+- [MQTT - Continuação](mqtt2.md)
 - Hardware para IoT
     - ESP8266
     - Arduino IDE
