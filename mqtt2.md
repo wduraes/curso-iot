@@ -4,6 +4,12 @@ Na aula antetior vimos os comandos básicos do MQTT mas todo acesso foi anônimo
 
 Para isso vamos testar o acesso a MQTT Brokers que estão na nuvem e que são gratuitos, alguns com acesso anônimo e outros que vão exigir credenciais para acesso.
 
+### Video
+
+O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o MQTT e a demonstração dos comandos abaixo. 
+
+[![Setup](Imagens/setup.png)](https://www.youtube.com/watch?v=EoNqGlTZd08&ab_channel=RadioRescue)
+
 ### Servidores MQTT na Nuvem
 
 Existem varios serviços de teste de MQTT Brokers na internet, vamos utilizar dois deles que permitem acesso anônimo.
@@ -28,6 +34,7 @@ mosquitto_pub -d -t /dev/test -m "mensagem de teste" -h "test.mosquitto.org"
 ```
 <br>
 A esta altura voce já deve ter notado que, por permitir acesso anônimo, qualquer pessoa no mundo pode publicar dados para o tópico /dev/test e, da mesma forma, podem subscrever a este tópico e receber todas as publicações que voce fizer. 
+<br>
 
 ### Servidor MQTT gratuito - Adafruit
 
@@ -39,3 +46,23 @@ A esta altura voce já deve ter notado que, por permitir acesso anônimo, qualqu
 1. Inteface gráfica para visualizacão de dados e interacao com os devices
 
 **<Opinião>**: Existe ainda uma versão paga deste serviço que é menos restritiva quando a limites, mas ainda está longe de atender a aplicações de IoT mais sérias. O Adafruit.IO é perfeito para makers e para que voce controle seu abridor de garagem ou para controlar remotamente um abajur (que sao projetos sensacionais, diga-se de passagem) mas se voce está considerando fazer de IoT uma carreira ou voce tem um cliente que vai pagar pelo serviço, existem alternativas profissionais de IoT que tem benefícios que ultrapassam a capacidade atual do Adafruit.IO. **</Opinião>**
+
+Crie uma conta gratuita em io.adafruit.com (em inglês) ao clicar em "Get started for free".
+
+Após ter criado a sua conta, verifique suas credenciais que ficam no menu "IO" na parte superior a direita da tela. Clique neste item e anote seu username e active key (que é a sua senha).
+
+### Teste com sua conta da Adafruit
+
+Para testar abra dois painéis no Windows Terminal com o WSL /Ubuntu e execute cada comando em um painel ( não vamos usar essa maquina virtual como servidor, mas ainda precisamos do cliente de MQTT para o teste)
+
+```bash
+mosquitto_sub -d -t [insira seu username aqui]/dev/test -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
+mosquitto_pub -d -t [insira seu username aqui]/dev/test -m "mensagem de teste" -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
+```
+
+### Tem um Raspberry Pi que não esta usando?
+
+O Raspberry Pi (praticamente qualquer versão dele) é uma ótima solução para criar um pequeno servidor para testes com IoT. Caso voce tenha um Raspberry Pi ou tenha interesse em adiquirir um, é um investimento que vale a pena pelo aprendizado que ele proporciona.
+
+Instale o Mosquitto no Raspberry Pi e utilize-o como servidor, substituindo o host no exemplo acima (-h "io.dadafruit.com") pelo endereço IP do seu Raspberri Pi, exemplo -h "192.168.1.12".
+
