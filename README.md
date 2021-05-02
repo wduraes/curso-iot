@@ -7,6 +7,12 @@ Enquanto isso possibilita inumeros cenários de negócio e melhoria para a socie
 
 Embora esta séria de Workshops não se proponha a ensinar IoT desde o nivel zero (se voce ainda nao sabe o que é IoT estes workshops nao são pra voce), acreditamos que tenha potencial para ajudar muitas pessoas a começar.
 
+### Video
+
+O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o curso. 
+
+[![Setup](Imagens/intro.png)](https://youtu.be/H0uoGbYuxdA)
+
 ## Pré-requisitos
 
 Para voce ser bem sucedido em acompanhar estes workshops E aprender IoT, existem alguns pre-requisitos:

@@ -10,9 +10,9 @@ Todos eles são gratuitos.
 
 ### Video
 
-O link abaixo para o meu canal do YouTube mostra a instalação apenas do item #3 dado que este passo é um pouco mais complicado que os demais. 
+O link abaixo para o meu canal do YouTube mostra a instalação apenas do WSL dado que este passo é um pouco mais complicado que os demais. 
 
-[![Setup](Imagens/setup.png)](https://www.youtube.com/watch?v=EoNqGlTZd08&ab_channel=RadioRescue)
+[![Setup](Imagens/setup.png)](https://youtu.be/Zdy-At6N3hc)
 
 Todos os demais passos requerem apenas a instalação com todas as opções default. 
 
