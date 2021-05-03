@@ -65,4 +65,3 @@ mosquitto_pub -d -t [insira seu username aqui]/dev/test -m "mensagem de teste" -
 O Raspberry Pi (praticamente qualquer versão dele) é uma ótima solução para criar um pequeno servidor para testes com IoT. Caso voce tenha um Raspberry Pi ou tenha interesse em adiquirir um, é um investimento que vale a pena pelo aprendizado que ele proporciona.
 
 Instale o Mosquitto no Raspberry Pi e utilize-o como servidor, substituindo o host no exemplo acima (-h "io.dadafruit.com") pelo endereço IP do seu Raspberri Pi, exemplo -h "192.168.1.12".
-

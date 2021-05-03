@@ -37,7 +37,6 @@ Vamos explorar agora os seguintes conceitos de MQTT:
 -	Topics
 -	QoS
 -	Debug 
-- Retain
 
 #### Mosquitto Subscribe
 
@@ -80,4 +79,3 @@ Onde:
  - -P = password (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
  - -h = host IP (IP da maquina onde o broker está instalado. Se nao for utilizado, o default é LOCALHOST, que é o nosso caso)
  - -q = QoS utilizado - pode ser 0, 1 ou 2. Se noa for informado o default é zero.
- - -r = retain (se for utilizado a última mensagem enviada a estetópico será mantida pelo broker)
