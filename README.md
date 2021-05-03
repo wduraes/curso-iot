@@ -11,7 +11,7 @@ Embora esta séria de Workshops não se proponha a ensinar IoT desde o nivel zer
 
 O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o curso. 
 
-[![Setup](Imagens/intro.png)](https://youtu.be/H0uoGbYuxdA)
+[![Setup](Imagens/intro.png)](https://youtu.be/ItrVKlmpxF0)
 
 ## Pré-requisitos
 
