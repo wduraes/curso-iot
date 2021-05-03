@@ -14,7 +14,7 @@ Para exercitar o conhecimento em MQTT vamos precisar de um MQTT Broker para onde
 
 O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o MQTT e a demonstração dos comandos abaixo. 
 
-[![Setup](Imagens/setup.png)](https://www.youtube.com/watch?v=EoNqGlTZd08&ab_channel=RadioRescue)
+[![Setup](Imagens/mqtt.png)](https://youtu.be/0oOecMV_rrI)
 
 #### Instalar o Mosquitto MQTT Broker
 
@@ -72,7 +72,7 @@ mosquitto_pub -d -t /dev/test -m "mensagem de teste"
 ```
 Onde: 
  - mosquitto_pub = publica uma mensagem a um tópico chamado /dev/test no broker 
- - -d = debug - moatra detalhes da comunicação entre o cliente e o broker
+ - -d = debug - mostra detalhes da comunicação entre o cliente e o broker
  - -t  = tópico
  - /dev/test = nome do tópico a que se deseja publicar
  - -u = username (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
