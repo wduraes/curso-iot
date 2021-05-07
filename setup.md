@@ -1,12 +1,8 @@
 ## Setup da máquina de desenvolvimento
 
-O primeiro passo no curso é fazer o setup da máquina que será utilizada para o desenvolvimento necessário do curso. Ela pode ser um desktop ou laptop, nao faz diferença e se é capaz de rodar o Windows 10, provavelmente será o suficiente.
+O primeiro passo no curso é fazer o setup da máquina que será utilizada para o desenvolvimento no decorrer do curso. Ela pode ser um desktop ou laptop e precisa ser capaz de rodar o Windows 10. Esta máquina precisa ter ao menos uma porta USB disponível e voce precisa ter um usuário com permissão de instalar e executar softwares como administrador.
 
-Esta máquina precisa ter ao menos uma porta USB disponível e voce precisa ter um usuário com permissão de instalar e executar softwares como administrador.
-
-Embora a maioria dos aplicativos mencionados aqui estejam disponíveis para Linux e Mac, 100% dos meus exemplos utilizam um PC rodando Windows 10 e, quando necessário o uso de Linux, o WSL (Windows Subsystem for Linux) será a opção.
-
-Todos eles são gratuitos.
+Embora a maioria dos aplicativos mencionados aqui estejam disponíveis para Linux e Mac, 100% dos meus exemplos utilizam um PC rodando Windows 10 e, quando necessário o uso de Linux, o WSL (Windows Subsystem for Linux) será a opção.Todos os aplicativos utilizados são gratuitos.
 
 ### Video
 

@@ -8,7 +8,7 @@
 
 ### Utilizando MQTT na prática
 
-Para exercitar o conhecimento em MQTT vamos precisar de um MQTT Broker para onde vamos enviar mensagens e de onde também vamos receber mensagens. É neste momento que o WSL (Windows Subsystem for Linux) vai ser útil: vamos instalar um MQTT Broker no Ubuntu e acessar este serviço via linha de comando para entende-lo. 
+Para exercitar o conhecimento em MQTT vamos precisar de um MQTT Broker para onde vamos enviar mensagens e de onde também vamos receber mensagens. É neste momento que o WSL (Windows Subsystem for Linux) vai ser útil: vamos instalar um MQTT Broker no Ubuntu e acessar este serviço via linha de comando para entendê-lo. 
 
 ### Video
 
@@ -25,18 +25,17 @@ sudo apt-get install mosquitto -y
 sudo apt-get install mosquitto-clients -y
 ```
 
-O primeiro comando instala o MQTT Broker e o segundo instala um conjunto de clientes que vamso usar para conectar e testar o Mosquitto.
+O primeiro comando instala o MQTT Broker e o segundo instala um conjunto de clientes que vamos usar para conectar e testar o Mosquitto.
 
 Para facilitar este exercício vamos usar o Windows Terminal.
 
 #### Explorando o Mosquitto
 
-Vamos explorar agora os seguintes conceitos de MQTT:
+Vamos explorar os seguintes conceitos de MQTT:
 -	Publish
 -	Subscribe
 -	Topics
 -	QoS
--	Debug 
 
 #### Mosquitto Subscribe
 
@@ -61,11 +60,12 @@ Onde:
  - -P = password (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
  - -h = host IP (IP da maquina onde o broker está instalado. Se nao for utilizado, o default é LOCALHOST, que é o nosso caso)
 
+Porque precisamos de duas janelas abertas? Note que estamso usando WSL então o Mosquitto é executado apenas enquanto essa janela está aberta. Numa maquina Linux, poderíamos rodar o Mosquitto como um serviço. 
   
 #### Mosquitto Publish
 
 - Detalhes do comando Mosquitto Publish [aqui](https://mosquitto.org/man/mosquitto_pub-1.html) (em inglês).
-- Abra um novo painel no Windows Terminal (alt+shift+plus) e inicie o Mosquitto1 (caso ele nao esteja rodando ainda)
+- Abra um novo painel no Windows Terminal (alt+shift+plus) e inicie o Mosquitto (caso ele nao esteja rodando ainda, uma janela com o Mosquitto é o bastante)
   
 ```bash
 mosquitto_pub -d -t /dev/test -m "mensagem de teste"
@@ -78,4 +78,4 @@ Onde:
  - -u = username (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
  - -P = password (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
  - -h = host IP (IP da maquina onde o broker está instalado. Se nao for utilizado, o default é LOCALHOST, que é o nosso caso)
- - -q = QoS utilizado - pode ser 0, 1 ou 2. Se noa for informado o default é zero.
+ - -q = QoS utilizado - pode ser 0, 1 ou 2. Se nao for informado o default é zero.
