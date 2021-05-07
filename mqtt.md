@@ -16,6 +16,12 @@ O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o
 
 [![Setup](Imagens/mqtt.png)](https://youtu.be/0oOecMV_rrI)
 
+#### Setup do PC
+
+Para executar os testes abaixo, é necessário um conjunto de ferramentas para enviar dados, receber dados e um serviço (MQTT Broker) que centraliza as mensagens e as redistribui. Essas ferramentas (mosquitto e mosquitto-clients) estão disponíveis apenas para Linux por esse motivo fizemos a instalação do WSL (Windows Subsystem for Linux) que vai permitir a utilização dessas ferramentas no Windows. 
+
+![Setup](Imagens/mqtt-explained2.png)
+
 #### Instalar o Mosquitto MQTT Broker
 
 Abra o WSL e execute os seguintes comandos:
@@ -79,3 +85,9 @@ Onde:
  - -P = password (não é necesário quando o acesso anônimo é permitido no broker, como é o nosso caso agora)
  - -h = host IP (IP da maquina onde o broker está instalado. Se nao for utilizado, o default é LOCALHOST, que é o nosso caso)
  - -q = QoS utilizado - pode ser 0, 1 ou 2. Se nao for informado o default é zero.
+
+#### Cenário dessa configuração
+
+Nos exemplos acima utilizamos o Mosquitto como o MQTT Broker e os clientes para enviar e receber dados do Broker. Todos eles estao sendo executados localmente dentro do ambiente do WSL (uma maquina virtual Linux dentro do Windows) como a figura abaixo ilustra.
+
+![Setup](Imagens/mqtt-explained3.png)

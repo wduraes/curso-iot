@@ -12,7 +12,9 @@ O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o
 
 ### Servidores MQTT na Nuvem
 
-Existem varios serviços de teste de MQTT Brokers na internet, vamos utilizar um que permite acesso anônimo.
+Existem varios serviços de teste de MQTT Brokers na internet, vamos utilizar um que permite acesso anônimo. A figura abaixo mostra que ainda estaremos utilizando os clientes do Mosquitto para enviar e receber dados, mas o serviço está fora de nosso computador.
+
+![Setup](Imagens/mqtt-explained4.png)
 
 [**Mosquitto**](https://mosquitto.org/) - tem seu serviço online de test em test.mosquitto.org. 
 
