@@ -8,7 +8,7 @@ Para isso vamos testar o acesso a MQTT Brokers que estão na nuvem e que são gr
 
 O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o MQTT e a demonstração dos comandos abaixo. 
 
-[![Setup](Imagens/setup.png)](https://www.youtube.com/watch?v=EoNqGlTZd08&ab_channel=RadioRescue)
+[![Setup](Imagens/mqtt2.png)](https://youtu.be/-4V2jQ5Flkw)
 
 ### Servidores MQTT na Nuvem
 
