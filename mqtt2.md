@@ -12,17 +12,7 @@ O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o
 
 ### Servidores MQTT na Nuvem
 
-Existem varios serviços de teste de MQTT Brokers na internet, vamos utilizar dois deles que permitem acesso anônimo.
-
-[**Eclipse Paho**](https://www.eclipse.org/paho/) - tem seu serviço online de test em mqtt.eclipse.org. 
-
-Para testar abra dois painéis no Windows Terminal com o WSL /Ubuntu e execute cada comando em um painel ( não vamos usar essa maquina virtual como servidor, mas ainda precisamos do cliente de MQTT para o teste)
-
-```bash
-mosquitto_sub -d -t /dev/test -h "mqtt.eclipse.org"
-mosquitto_pub -d -t /dev/test -m "mensagem de teste" -h "mqtt.eclipse.org"
-```
-<br>
+Existem varios serviços de teste de MQTT Brokers na internet, vamos utilizar um que permite acesso anônimo.
 
 [**Mosquitto**](https://mosquitto.org/) - tem seu serviço online de test em test.mosquitto.org. 
 
@@ -38,7 +28,7 @@ A esta altura voce já deve ter notado que, por permitir acesso anônimo, qualqu
 
 ### Servidor MQTT gratuito - Adafruit
 
-[Adafruit](www.adafruit.com) é uma emrpesa americana fundada por Limor Fried (mais conhecida como Lady Ada) e que presta um papel importantíssimo na comunidade Maker. Um de seus produtos é uma versão minimalista de nuvem chamado [Adafruit.IO](https://io.adafruit.com/) que permite acesso gratuito a um MQTT Broker com as seguintes características:
+[Adafruit](www.adafruit.com) é uma empresa americana fundada por Limor Fried (mais conhecida como Lady Ada) e que presta um papel importantíssimo na comunidade Maker. Um de seus produtos é uma versão minimalista de nuvem chamado [Adafruit.IO](https://io.adafruit.com/) que permite acesso gratuito a um MQTT Broker com as seguintes características:
 1. MQTT Broker 
 1. Limite de 30 mensagens por minuto (1 mensagem a cada 2 segundos se voce só tiver um device conectado ou uma mensagem por minuto se voce tiver 30 devices conectados)
 1. 30 dias de armazenamento dos dados recebidos
@@ -56,12 +46,14 @@ Após ter criado a sua conta, verifique suas credenciais que ficam no menu "IO" 
 Para testar abra dois painéis no Windows Terminal com o WSL /Ubuntu e execute cada comando em um painel ( não vamos usar essa maquina virtual como servidor, mas ainda precisamos do cliente de MQTT para o teste)
 
 ```bash
-mosquitto_sub -d -t [insira seu username aqui]/dev/test -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
-mosquitto_pub -d -t [insira seu username aqui]/dev/test -m "mensagem de teste" -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
+mosquitto_sub -d -t [insira seu username aqui]/feeds/dev/test -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
+mosquitto_pub -d -t [insira seu username aqui]/feeds/dev/test -m "mensagem de teste" -u "[insira seu username]" -P "[insira sua senha - key]" -h "io.adafruit.com"
+
+Exemplo de como o comando ficaria:
+mosquitto_pub -d -t cursoiot/feeds/teste -m "123" -u "cursoiot" -P "p@2ex%rFr!" -h "io.adafruit.com"
 ```
 
-### Tem um Raspberry Pi que não esta usando?
+Imagem do Dashboard após a criação de dois blocos de streaming, um subcrevendo ao tópico "teste" e outro ao tópico "on off", e um outro bloco de toggle (chave liga-desliga) que - ao mesmo tempo - subscreve e pode publicar no tópico "on off".
 
-O Raspberry Pi (praticamente qualquer versão dele) é uma ótima solução para criar um pequeno servidor para testes com IoT. Caso voce tenha um Raspberry Pi ou tenha interesse em adiquirir um, é um investimento que vale a pena pelo aprendizado que ele proporciona.
-
-Instale o Mosquitto no Raspberry Pi e utilize-o como servidor, substituindo o host no exemplo acima (-h "io.dadafruit.com") pelo endereço IP do seu Raspberri Pi, exemplo -h "192.168.1.12".
+ 
+![Setup](Imagens/adafruit.png)
