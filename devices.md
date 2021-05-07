@@ -58,6 +58,8 @@ Opcionalmente pode ser necessária a instalação de um driver adicional caso a 
 
 ![Thing](Imagens/drivers.png)
 
+Quando seu computador estiver configurado, voce pode pegar [este código de exemplo](sample-code/basic-test.ino) e carregar no seu ESP8266.
+
 ### Video
 
 O link abaixo para o meu canal do YouTube mostra a instalação de todos os software listados acima, a montagem do circuito e a execução do código de teste.
