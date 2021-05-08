@@ -75,4 +75,5 @@ O link abaixo para o meu canal do YouTube mostra a instalação de todos os soft
 1. Conectei todos os componentes e o circuito não funciona. Caso voce experimente qualquer problema com a placa, siga o método do dividir para conquistar: teste  circtuito em partes.
     1. Remova o ESP8266 da protoboard e conecte o cabo USB nele. O computador reconhece a placa? (olhe no device manager) Se nao reconhecer ainda voce pode ter um cabo USB que não é de dados (veja item #1 acima). Se sua instalação de Arduino IDE for antiga, remova e reinstale: como o Arduino IDE instala vários driver para placas, eventualmente voce pode estar com drivers antigos.
     1. Se o computador reconhecer o ESP8266 tente programar ele sozinho, mesmo fora do protoboard. Se voce conseguir programar o seu ESP8266 e seu cabo USB estão funcionando corretamente.
-    1. Volte o ESP8266 pra protoboard a verifique todas as suas conexões. 
+    1. Volte o ESP8266 pra protoboard a verifique todas as suas conexões. Refaça uma a uma enquanto testa se o circuito está funcionando.
+1. Onde conseguir mais informações sobre o ESP8266? Verifique o [site oficial de suporte do ESP8266](https://arduino-esp8266.readthedocs.io/en/latest/index.html) (em inglês.)
