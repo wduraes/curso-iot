@@ -87,7 +87,7 @@
       if (temperature.publish(event.temperature)) 
       {
         Serial.print("Sending temperature val ");
-        Serial.print(event.temperature);  
+        Serial.println(event.temperature);  
       }
     }
     
@@ -102,7 +102,7 @@
       if (humidity.publish(event.relative_humidity)) 
       {
         Serial.print("Sending humidity val ");
-        Serial.print(event.relative_humidity);
+        Serial.println(event.relative_humidity);
       }
     }
   }  

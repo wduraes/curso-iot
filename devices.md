@@ -15,7 +15,7 @@ Em sua forma mais básica, uma coisa ou device, possui as seguintes característ
 
 O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre devices para IoT.
 
-[![Setup](Imagens/intro.png)](https://youtu.be/ItrVKlmpxF0)
+[![Setup](Imagens/device1.png)](https://youtu.be/KkLqBPoI5O0)
 
 ## Mão na massa
 
@@ -64,4 +64,15 @@ Quando seu computador estiver configurado, voce pode pegar [este código de exem
 
 O link abaixo para o meu canal do YouTube mostra a instalação de todos os software listados acima, a montagem do circuito e a execução do código de teste.
 
-[![Setup](Imagens/intro.png)](https://youtu.be/ItrVKlmpxF0)
+[![Setup](Imagens/device2.png)](https://youtu.be/N7B_R-UfF4c)
+
+### FAQ - Perguntas Frequentes
+
+1. Conectei meu device no computador, instalei o driver (se for o CH340G), mas ele não aparece de jeito nenhum no Device Manager. Neste caso, verifique se o cabo USB que voce está usando é um cabo de dados. Vários cabos possuem internamente apenas 2 fios e são utilizados apenas para carregar a bateria de dispositivos USB. Neste caso, precisamos, além dos fios de alimentação, dos dois fios de dados. Se o seu cabo for um cabo de alimentacao apenas, voce nao vai conseguir programar o seu device. Na dúvida, procure comprar um cabo que voce tenha certeza que é de dados.
+1.  Assisti o video mas fiquei com muitas duvidas no Arduino porque é a primeira vez que eu uso este tipo de programa. O que voce sugere? Se voce é iniciante em Arduino e programação de firmware em devices, a melhor maneira de aprender o básico é assistindo videos de Arduino 101, videos básicos e introdutórios de Arduino. Dois de meus canais brasileiros favoritos neste tópico são o canal do [Marlon Nardi](https://www.youtube.com/user/Marlon7642) e o do [Wagner Rambo](https://www.youtube.com/user/canalwrkits). 
+1. Mesmo com a sua explicação ainda não entendi nada do código de exemplo. Na verdade esse código, embora simples do ponto de vista de exemplo pra IoT, ele já é consideravelmente avançado para programadores inciantes e, infelizmente, não há outro jeito para trabalhar num código que necessita de diversas bibliotecas externas, requer conexão com serviços web e também implementa reconexão automática. Os canais que mencionei acima podem te ajudar a entender circuitos e códigos mais simples que podem ser a base para entender códigos mais complexos.
+1. Vale mesmo a pena comprar o ESP8266 pra acopanhar o curso? A compra é opcional. Mas, obviamente, voce nao será capaz de ver nenhum dos exemplos práticos funcionando dificultando e muito o seu aprendizado. Se voce puder fazer um esforço e comprar, o seu investimento de tempo será muito melhor aproveitado.
+1. Conectei todos os componentes e o circuito não funciona. Caso voce experimente qualquer problema com a placa, siga o método do dividir para conquistar: teste  circtuito em partes.
+    1. Remova o ESP8266 da protoboard e conecte o cabo USB nele. O computador reconhece a placa? (olhe no device manager) Se nao reconhecer ainda voce pode ter um cabo USB que não é de dados (veja item #1 acima). Se sua instalação de Arduino IDE for antiga, remova e reinstale: como o Arduino IDE instala vários driver para placas, eventualmente voce pode estar com drivers antigos.
+    1. Se o computador reconhecer o ESP8266 tente programar ele sozinho, mesmo fora do protoboard. Se voce conseguir programar o seu ESP8266 e seu cabo USB estão funcionando corretamente.
+    1. Volte o ESP8266 pra protoboard a verifique todas as suas conexões. 
