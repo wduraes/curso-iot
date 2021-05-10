@@ -36,11 +36,13 @@ Nos workshops que fazem parte desse repositório, eu vou cobrir os seguintes asp
 - [MQTT - Protocolo da IoT](mqtt.md)
 - [MQTT - Continuação](mqtt2.md)
 - [Hardware para IoT](devices.md)
-    - ESP8266
+    - ESP8266 - Node MCU
     - Arduino IDE
-    - Sensores e Atuadores
-    - Eletronica básica para devices
-- Servidor MQTT local
+    - Visão geral de Sensores e Atuadores
+    - Criando o circuito básico
+    - Criando uma conta no IO.Adafruit.com 
+    - Teste do device mandando dados de telemetria
+- [Servidor MQTT local](local.md)
     - MQTT Broker
     - Conectando o ESP8266 neste servidor local
     - Tratamento de dados

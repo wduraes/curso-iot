@@ -19,22 +19,38 @@ O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre d
 
 ## Mão na massa
 
-Para essa parte do curso voce precisa de alguns componentes eletrônicos:
+Para essa parte do curso voce vai precisar de alguns componentes eletrônicos:
 
-1. ESP8266 (Node MCU) - Esse é o kit de desenvolvimento Wi-Fi
-1. DHT11 - Sensor de temperatura e umidade
-1. Protoboard / Breadboard - placa que dará sustentação mecânica e conexão elétrica dos componentes
-1. LED - pode ser de qualquer cor
-1. Resistores: 
+1. 1 ESP8266 (Node MCU) - Esse é o kit de desenvolvimento Wi-Fi
+1. 1 DHT11 - Sensor de temperatura e umidade
+1. 1 Protoboard / Breadboard - placa que dará sustentação mecânica e conexão elétrica dos componentes
+1. 1 LED - pode ser de qualquer cor
+1. 2 Resistores: 
     1. 10K (marrom, preto, laranja) uma peça 1/4W
     1. 330R (laranja, laranja, marrom) uma peça 1/4W
-1. Fios para conexão (idealmente cabinho rígido AWG22)
+1. 1 Cabo USB (Micro) de Dados - tem que ser cabo de dados, que possui 4 fios internamente (2 para dados e 2 para alimantação). Cabos de alimentação apenas (com 2 fios internos) NÃO vão funcionar.
+1. Alguns fios para conexão (idealmente cabinho rígido AWG22) meio metro deve ser mais que suficiente. Considere também alicate de corte e descascador. 
+
+
+### Cenário que iremos construir
+
+A imagem abaixo mostra o cenário que iremos construir nessa parte do curso. Ela envolve os seguintes componentes:
+
+1. ESP8266 com um device IoT que irá executar o [basic-test.ino](sample-code/basic-test.ino) (lembram-se? elste código é também conhecido como firmware)
+1. Componentes adicionais ao ESP8266, como mostrado na seção montagem do breadboard abaixo 
+1. O serviço de cloud do io.adafruit.com (vamos reusar a conta que criamos na aula passada)
+1. Neste serviço de cloud (MQTT Broker) vamos criar 3 feeds, dois para enviarmos dados do device para a nuvem e um para receber comandos da nuvem.
+    1. Telemetria (também conhecida como D2C ou device to cloud) são todos os dados enviados do device para a nuvem via PUBLISH no MQTT. No nosso caso, enviaremos temperatura e umidade. 
+    1. Comandos (também conhecido como C2D ou cloud to device) são todos os dadso recebidos do device a partir da nuvem via SUBSCRIBE do MQTT. Neste caso receberemos comnados de liga e desliga que controlará o LED. 
+1. Internamente no serviço da Adafruit eles possuem uma base de dados que armazena os dados dos feeds por 30 dias e o dashboard que podemos configurar para mostrar dados e enviar comandos.
+
+![Cenario](Imagens/device3.png)
 
 ### Montagem no Breadboard:
 
 A figura abaixo mostra como os componentes devem ser posicionados e as ligações entre os mesmos. A cor dos fios não é importante, desde que todos estejam ligados nas posições corretas voce pode usar qualquer cor. Esse diagrama mostra o DHT22 (componente branco), mas na verdade nós utilizaremos o DHT11 (azul).
 
-![Thing](Imagens/breadboard.png)
+![Breadboard](Imagens/breadboard.png)
 
 ### Setup do device no seu computador
 
@@ -54,11 +70,14 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
     1. Sensor Lib
     1. Adafruit MQTT 
 
-Opcionalmente pode ser necessária a instalação de um driver adicional caso a sua placa ESP8266-Node MCU possua o chip CH340G. O video mostra os passos para instalação. 
+4. Usar o serviço do Adafruit.IO para mandar dados de telemetria (temperatura e umidade) a partir do seu ESP8266, criar um dashboard para visualização desses dados
+1. Usar o serviço do Adafruit.IO para receber comandos da Nuvem, criar um botão no seu dashboard para controlar o Led na sua placa.
+
+Opcionalmente pode ser necessária a instalação de um driver adicional caso a sua placa ESP8266-Node MCU possua o chip CH340G. O video mostra os passos para instalação.
 
 ![Thing](Imagens/drivers.png)
 
-Quando seu computador estiver configurado, voce pode pegar [este código de exemplo](sample-code/basic-test.ino) e carregar no seu ESP8266.
+Quando seu computador estiver configurado, voce pode pegar o [basic-test.ino](sample-code/basic-test.ino) e carregar no seu ESP8266.
 
 ### Video
 
