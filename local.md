@@ -49,13 +49,10 @@ mosquitto
 
 Se tudo deu certo, voce deve ver uma mernsagem de erro que diz "Address is already in use", o que significa que voce nao pode iniciar o Mosquitto porque ele já está rodando (o que é bom!).
 
-4. Instale [Node Red](https://nodered.org/) - Este passo só é necesário caso voce nao esteja usando o Raspberry Pi. 
-    - Node red requer que o Node JS e NPM sejam instalados como pré-requisito.
-
-
+4. Instale [Node Red](https://nodered.org/) 
+    
 ```bash
-sudo apt-get install nodejs -y
-sudo apt-get install npm -y
+sudo apt install build-essential git
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 
 ```
@@ -78,9 +75,9 @@ sudo systemctl status mosquitto
 ```bash
 sudo ifconfig
 ```
-- ETH0 é a porta que nos interessa caso voce esteja com um cabo de rede conectado no seu Raspberry Pi.
+- eth0 é a porta que nos interessa caso voce esteja com um cabo de rede conectado no seu Raspberry Pi.
 
-- XXX caso voce esteja usando Wi-Fi no raspberry Pi. 
+- wlan0 caso voce esteja usando Wi-Fi no raspberry Pi. 
 
 6. Seu Raspberry Pi está pronto para receber mensagens MQTT do Device.
 
@@ -104,12 +101,12 @@ sudo ifconfig
     - Selecione import to current flow e clique em import
     
 ```json
-[{"id":"9827e37.2cc092","type":"tab","label":"Teste do Mosquitto e Device","disabled":false,"info":""},{"id":"60606fbf.e3564","type":"mqtt in","z":"9827e37.2cc092","name":"Mosquitto-MQTT","topic":"WEATHER","qos":"0","datatype":"auto","broker":"386009ad.06dbd6","x":180,"y":140,"wires":[["d33adc0a.5f606"]]},{"id":"d33adc0a.5f606","type":"debug","z":"9827e37.2cc092","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":440,"y":220,"wires":[]},{"id":"386009ad.06dbd6","type":"mqtt-broker","z":"","name":"Mosquitto-Local","broker":"10.0.0.46","port":"1883","clientid":"","usetls":false,"compatmode":false,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","closeTopic":"","closeQos":"0","closePayload":"","willTopic":"","willQos":"0","willPayload":""}]
+[{"id":"9827e37.2cc092","type":"tab","label":"Teste do Mosquitto e Device","disabled":false,"info":""},{"id":"60606fbf.e3564","type":"mqtt in","z":"9827e37.2cc092","name":"Mosquitto-MQTT","topic":"TEMPO","qos":"0","datatype":"auto","broker":"386009ad.06dbd6","nl":false,"rap":false,"x":180,"y":140,"wires":[["d33adc0a.5f606"]]},{"id":"d33adc0a.5f606","type":"debug","z":"9827e37.2cc092","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":440,"y":220,"wires":[]},{"id":"386009ad.06dbd6","type":"mqtt-broker","name":"Mosquitto-Local","broker":"192.168.1.87","port":"1883","clientid":"","usetls":false,"compatmode":false,"protocolVersion":"4","keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","birthMsg":{},"closeTopic":"","closeQos":"0","closePayload":"","closeMsg":{},"willTopic":"","willQos":"0","willPayload":"","willMsg":{},"sessionExpiry":""}]
 ```
 
-2. Se tudi correr bem voce der ter o seguint workflow na sua janela:
+2. Se tudo correr bem voce der ter o seguint workflow na sua janela:
 
-![IoT End to end](resources/test-flow.png)
+![Servidor Local](Imagens/local1.png)
 
 3. Este workflow não vai funcionar automaticamente porque ele tem o IP incorreto:
 
@@ -123,10 +120,10 @@ sudo ifconfig
 
 ```html
 7/3/2020, 4:23:27 PMnode: d33adc0a.5f606
-WEATHER : msg.payload : string[37]
+TEMPO : msg.payload : string[37]
 "ID=6363483;LOC=1;TEMP=22.90;HUM=58.00"
 ```
-### Server Side - Bando de dados
+### Server Side - Banco de dados
 
 1. Dada a natureza dos dados de telemetria que estamso mandando pro MQTT Broker, a melhor maneira de armazenar estes dados é comm um banco de dados de time series. Ele provê a melhor abordagem para responder a perguntas como:
     - Qual foi a temperatura méria ontem?
@@ -148,7 +145,7 @@ sudo service influxdb start
 
 ```SQL
 influx
-CREATE DATABASE WEATHER 
+CREATE DATABASE TEMPO 
 SHOW DATABASES
 EXIT
 ```     
@@ -159,7 +156,7 @@ EXIT
     - Selecione "node-red-contrib-influxdb" e clique em install
     - Isso vai adicionar os novos nodes ao seu painel a esquerda como mostrado abaixo:
 
-![IoT End to end](resources/new-nodes.png)
+![Servidor Local](Imagens/local2.png)
 
 5. Importe o fluxo de exemplo 
     - Copie o arquivo JSON abaixo (para copiar a linha toda, de um clique triplo na linha e depois CTRL+C)
@@ -222,7 +219,7 @@ sudo /bin/systemctl start grafana-server
     - Na home page clique em "Add your first datasource"
     - Selecione InfluxDB
     - Atualize a URL em HTTP para o IP do seu Raspberry Pi, como http://192.168.1.46:8086
-    - Em database, digite WEATHER
+    - Em database, digite TEMPO
     - Na parte de baiso dessa tela, clique em Save & Test (ele te mostra um sinal verde se tudo deu certo)
 
 5. Adicione um Dashboard
