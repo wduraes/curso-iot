@@ -28,34 +28,18 @@ Para voce ser bem sucedido em acompanhar estes workshops e aprender IoT, existem
 7. Tem conhecimento, ao menos básico, de **inglês**. Vários exemplos, ferramentas e websites estão disponíveis apenas em inglês, por isso o conhecimento especialmente em inglês técnico é muito importante.
 8. Está disposto a investir dinheiro ao **adquirir ao menos uma placa ESP8266** (custa por volta de R$30,00 no Mercado Livre em 2021), mas eu vou mostrar exemplos mais avançados que irão requerer mais partes além do ESP8266, como um Raspberry Pi, sensores, etc. Sugestão: pare de comer fast-food nos próximos meses para investir o dinheiro em aprendizado de IoT, seu colesterol e seu futuro agradecem.
 
-## Escopo dos Workshops
+## Workshops - Aulas
 
 Nos workshops que fazem parte desse repositório, eu vou cobrir os seguintes aspectos de IoT:
 
-- [Setup da maquina de desenvolvimento](setup.md)
-- [MQTT - Protocolo da IoT](mqtt.md)
-- [MQTT - Continuação](mqtt2.md)
-- [Hardware para IoT](devices.md)
-    - ESP8266 - Node MCU
-    - Arduino IDE
-    - Visão geral de Sensores e Atuadores
-    - Criando o circuito básico
-    - Criando uma conta no IO.Adafruit.com 
-    - Teste do device mandando dados de telemetria
-- [Servidor MQTT local](local.md)
-    - MQTT Broker
-    - Conectando o ESP8266 neste servidor local
-    - Tratamento de dados
-    - Banco de Dados TimeSeries
-    - Visualização de dados
-- Movendo o Servidor pra nuvem - Azure IaaS
-    - Setup servidor
-    - Setup IoT
-    - Setup do ESP8266
-    - Desafios
-- Movendo para o modelo Paas - Azure IoT Hub
-    - Funcionalidades do IoT Hub
-    - Usando o C SDK em devices reais
+1. [**Setup da maquina de desenvolvimento**](setup.md)
+2. **MQTT**:
+    1. [**MQTT - Protocolo da IoT**](mqtt.md)
+    1. [**MQTT - Continuação**](mqtt2.md)
+3. [**Hardware para IoT**](devices.md): ESP8266 - Node MCU, Arduino IDE, Visão geral de Sensores e Atuadores, Criando o circuito básico, Criando uma conta no IO.Adafruit.com, Teste do device mandando dados de telemetria
+4. [**Servidor MQTT local**](local.md): MQTT Broker, Conectando o ESP8266 neste servidor local, Tratamento de dados, Banco de Dados TimeSeries, Visualização de dados
+5. **Movendo o Servidor pra nuvem - Azure IaaS**: Setup servidor, Setup IoT, Setup do ESP8266, Desafios
+6. **Movendo para o modelo Paas - Azure IoT Hub**: Funcionalidades do IoT Hub, Usando o C SDK em devices reais
 
 Esta lista está sujeita a mudanças.
 
