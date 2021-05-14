@@ -10,9 +10,9 @@
 #define DHTTYPE DHT11 
 DHT_Unified dht(DHTPIN, DHTTYPE);
 
-#define WLAN_SSID "USERNAME"
-#define WLAN_PASS "PW"
-#define AIO_SERVER "13.66.201.126"
+#define WLAN_SSID "WI-FI"
+#define WLAN_PASS "SENHA"
+#define AIO_SERVER "IP"
 #define AIO_USERNAME ""
 #define AIO_KEY ""
 #define AIO_SERVERPORT  1883
@@ -20,7 +20,7 @@ DHT_Unified dht(DHTPIN, DHTTYPE);
 WiFiClient client;
 
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
-Adafruit_MQTT_Publish WEATHER = Adafruit_MQTT_Publish(&mqtt,"WEATHER");
+Adafruit_MQTT_Publish TEMPO = Adafruit_MQTT_Publish(&mqtt,"TEMPO");
 
 int ChipID = ESP.getChipId(); 
 
@@ -34,7 +34,7 @@ void setup()
   Serial.begin(115200);
   delay(10);
 
-  pinMode(16,OUTPUT);
+  //pinMode(16,OUTPUT);
   
   // Connect to WiFi access point.
   Serial.println();
@@ -67,7 +67,7 @@ void loop()
   float nn = event.temperature;
   dtostrf(nn, 2, 2, temp);
 
-    Payload = Payload + ChipID + ";LOC=1;TEMP=" + temp + ";HUM=";
+    Payload = Payload + ChipID + ";LOC=4;TEMP=" + temp + ";HUM=";
 
     dht.humidity().getEvent(&event);
     float no = event.relative_humidity;
@@ -87,12 +87,9 @@ void loop()
     //Publish all value into a single Topic and wait 10 secondes 
 
     Serial.println("Sending Payload data... ");
-    WEATHER.publish(char_array);       
+    TEMPO.publish(char_array);       
 
-    digitalWrite(16, 1);
-    delay(1000);
-    digitalWrite(16, 0);
-    delay(9000);
+    delay(30000);
 }
 
 // Function to connect and reconnect as necessary to the MQTT server.
