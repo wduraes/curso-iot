@@ -6,6 +6,12 @@ Dessa forma vamos ter que avaliar alternativas ao serviço da Adafruit, e uma da
 
 Esta solução será baseada, a princípio, em um pequeno Raspberry Pi (um computador single board) que atuará como servidor da nossa solução. Claro que o Raspberry Pi não é poderoso o bastante para executar cenários com um numero alto de clientes, mas ele é perfeito para aprendermos a usar uma maquina Linux como um servidor. Caso voce nao tenha um Raspberry Pi disponível, pode usar uma maquina maior como um PC com Linux em seu lugar, mas nem todos os comandos são identicos, o que vai exigir que voce adapte alguns deles.
 
+### Video
+
+O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre a criação de uma infra estrutura local de IoT.
+
+[![Setup](Imagens/local3.png)](https://youtu.be/q4GX7h1zYOc)
+
 ### Visão geral do que vamos construir
 
 A figura abaixo mostra a solução para IoT que vamos construir nessa aula. Ela vai permitir que devices IoT com ESP8266 enviem dados de telemetria (nao teremos mais o limite de 30 mensagens por minuto como na Adafruit), esses dadso serão armazenados em um banco de dados indefinidamente (e não apenas por 30 dias) e teremos uma ferramenta para criar gráficos e relatórios poderosa. Todos os sofwares usados nessa aula são gratuitos.
@@ -22,6 +28,12 @@ Vamos olhar cada parte dessa solução:
 1. **Raspberry OS**: Este é o sistema operacional utilizado pelo Raspberry Pi, mas se voce estiver no Linux em um PC, este pode ser substituído pelo Ubuntu ou qualquer outro tipo de Linux que suporte todos os serviços acima.
 
 ![Servidor Local](Imagens/local.png)
+
+### Video
+
+O link abaixo para o meu canal do YouTube traz um pouco mais de detalhes sobre o passo a passo da criação de uma infra estrutura local de IoT. Se preferir, pode seguir os passos descritos abaixo também.
+
+[![Setup](Imagens/local4.png)](https://youtu.be/SdtW1L6mrdo)
 
 ### Lado do servidor - Ingestão de dados
 
