@@ -38,7 +38,7 @@ Nos workshops que fazem parte desse repositório, eu vou cobrir os seguintes asp
     1. [**MQTT - Continuação**](mqtt2.md)
 3. [**Hardware para IoT**](devices.md): ESP8266 - Node MCU, Arduino IDE, Visão geral de Sensores e Atuadores, Criando o circuito básico, Criando uma conta no IO.Adafruit.com, Teste do device mandando dados de telemetria
 4. [**Servidor MQTT local**](local.md): MQTT Broker, Conectando o ESP8266 neste servidor local, Tratamento de dados, Banco de Dados TimeSeries, Visualização de dados
-5. **Movendo o Servidor pra nuvem - Azure IaaS**: Setup servidor, Setup IoT, Setup do ESP8266, Desafios
+5. [**Movendo o Servidor pra nuvem - Azure IaaS**](iaas.md): Setup servidor, Setup IoT, Setup do ESP8266, Desafios
 6. **Movendo para o modelo Paas - Azure IoT Hub**: Funcionalidades do IoT Hub, Usando o C SDK em devices reais
 
 Esta lista está sujeita a mudanças.
